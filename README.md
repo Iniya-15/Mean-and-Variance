@@ -48,11 +48,31 @@ It shows the distance of a random variable from its mean. It is calcualted as
 ![image](https://user-images.githubusercontent.com/103921593/229993174-5b67e57e-3e01-4ac4-9f83-410a932b22bf.png)
 
 # Program :
+```
+import numpy as np
 
+n = int(input("Enter number of values: "))
 
+print("Enter values of x:")
+x = np.array([float(input()) for _ in range(n)])
 
-# Output : 
+print("Enter probabilities:")
+p = np.array([float(input()) for _ in range(n)])
+
+# Mean
+mean = np.sum(x * p)
+
+# Variance
+variance = np.sum((x**2) * p) - mean**2
+
+print("Mean =", mean)
+print("Variance =", variance)
+
+```
+# Output :
+
+<img width="651" height="429" alt="image" src="https://github.com/user-attachments/assets/06c5d0f6-066f-445d-9e43-9d7d756da671" />
+
 
 # Results :
 The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
-
